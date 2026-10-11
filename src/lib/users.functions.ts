@@ -26,8 +26,8 @@ const deleteUserSchema = z.object({
 });
 
 function getClient(token: string) {
-  const url = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL || "https://ivczucpqxwwthhyzphix.supabase.co";
-  const key = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2Y3p1Y3BxeHd3dGhoeXpwaGl4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyOTgzODksImV4cCI6MjEwMjg3NDM4OX0.rNpBnN2xppIFblYjl0bkkmLvQXLEkFVAejzEVSWlDqM";
+  const url = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL || "https://xrohmfycclswuuqcmeoz.supabase.co";
+  const key = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhyb2htZnljY2xzd3V1cWNtZW96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3MDcwODksImV4cCI6MjEwNzI4MzA4OX0.6HRJmObUxJ-ebfFpdUFDpn4ZhAgaXOKPjAvKn3lO_tA";
   return createClient(url, key, {
     global: { headers: { Authorization: `Bearer ${token}` } },
     auth: { persistSession: false, autoRefreshToken: false },

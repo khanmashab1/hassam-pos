@@ -6,8 +6,8 @@ import { brokeredPreviewStorage } from './previewAuthStorage';
 function createSupabaseClient() {
   // Use import.meta.env for client-side (Vite build-time replacement)
   // Fall back to process.env for SSR (server-side rendering)
-  const SUPABASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_SUPABASE_URL) || process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL || "https://ivczucpqxwwthhyzphix.supabase.co";
-  const SUPABASE_PUBLISHABLE_KEY = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY) || process.env.VITE_SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2Y3p1Y3BxeHd3dGhoeXpwaGl4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyOTgzODksImV4cCI6MjEwMjg3NDM4OX0.rNpBnN2xppIFblYjl0bkkmLvQXLEkFVAejzEVSWlDqM";
+  const SUPABASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_SUPABASE_URL) || process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL || "https://xrohmfycclswuuqcmeoz.supabase.co";
+  const SUPABASE_PUBLISHABLE_KEY = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY) || process.env.VITE_SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhyb2htZnljY2xzd3V1cWNtZW96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3MDcwODksImV4cCI6MjEwNzI4MzA4OX0.6HRJmObUxJ-ebfFpdUFDpn4ZhAgaXOKPjAvKn3lO_tA";
 
   if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
     const missing = [
